@@ -1,5 +1,96 @@
-$body-color: orange;
+@import"settings.scss";
+.header {
+  display: flex;
+  background-color: $mainDark;
+  border-bottom: 1px solid #454545;
+}
+.header-logo {
+  position: absolute;
+  left: 68px;
+  top: 24px;
+}
+.header__wrapper {
+  max-width: 1315px;
+  margin: 0 auto;
+}
+.header-nav {
+  gap: 166px;
+  max-width: 1315px;
+  @include flexCenter;
+  padding: 27px 0;
 
-.hello {
-  color: $body-color;
+}
+.header-nav-wrapper {
+  @include flexCenter;
+  gap: 84px;
+  &__tel {
+    @include navText;
+  }
+}
+.header-nav-list {
+  @include flexCenter;
+  gap: 69px;
+  &__item {
+    position: relative;
+  }
+  &__link {
+    @include navText;
+  &:hover{
+      border-bottom: 2px solid $redElems;
+      padding: 27px 0;
+    }
+  }
+}
+.header-popUp {
+  position: absolute;
+  top: 56px;
+  left: -23px;
+  &__link {
+    @include navText;
+
+  }
+}
+.header-popUp-list {
+  flex-direction: column;
+    display: flex;
+    position: absolute;
+    top: 25px;
+    padding: 18px 31px;
+    gap: 20px;
+}
+.header-lang {
+  @include flexCenter;
+  gap: 19px;
+  &__lang{
+    text-transform: uppercase;
+    font-size: 12px;
+    color: $textNav;
+  }  
+}
+.header-right {
+  position: absolute;
+  right: 81px;
+  top: 25px;
+  @include flexCenter;
+  gap: 35px;
+}
+.search-wrapper {
+  position: relative;
+}
+.search-form {
+  &__field {
+    position: absolute;
+    right: -12px;
+  }
+}
+.cart-wrapper {
+  position: relative;
+  &__dot {
+    top: -6px;
+    right: -9px;
+    position: absolute;
+    @include box(7px);
+    border-radius: 100%;
+    background-color: $redElems;
+  }
 }

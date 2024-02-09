@@ -1,0 +1,10 @@
+@import"settings.scss";
+
+.promo {
+    height: 900px;
+    background-color: $mainDark;
+    border: 2px solid #FFF;
+    background-image: url(/src/img/promoMain.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+}

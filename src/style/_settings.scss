@@ -1,0 +1,109 @@
+
+// variables 
+$mainDark: #1B1F22;
+$sectionDark: #292B32;
+$redElems: #FF3E41;
+$textNav : #CBCECF;
+
+$smallDesc: 1750px;
+$tablet: 1200px;
+$mobile: 768px;
+//  mixins
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+}
+@mixin box($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+@mixin navText {
+  font-family: Arial, Helvetica, sans-serif;
+  color: $textNav;
+  font-size: 16px;
+}
+.wrapper {
+    max-width: 1315px;
+    margin: 0 auto;
+}
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+  a:active,
+  a:focus,
+  input:active,
+  input:focus,
+  textarea:active,
+  textarea:focus,
+  button:active,
+  button:focus,
+  label:active,
+  label:focus {
+    outline: none !important;
+    outline-style: none !important;
+    -moz-outline-style: none !important;
+    text-decoration: none !important;
+  }
+  
+  button {
+    cursor: pointer;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  h1 {
+    font-weight: 600;
+    font-size: 41px;
+    margin-bottom: 69px;
+    text-align: center;
+  }
+  
+  input,
+  select,
+  textarea {
+    outline: none !important;
+    outline-style: none !important;
+    -moz-outline-style: none !important;
+    border: 0;
+  }
+  
+  img {
+    line-height: 100%;
+    max-width: 100%;
+    display: block;
+  }
+  
+  a,
+  a:hover,
+  a:focus,
+  a:visited,
+  a:active {
+    text-decoration: none;
+    position: relative;
+  }
+  
+  ul {
+    list-style-type: none;
+    list-style-position: inside;
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+  
+  ol {
+    list-style-type: decimal;
+    list-style-position: inside;
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
