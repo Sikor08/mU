@@ -20,7 +20,13 @@ $mobile: 768px;
 @mixin navText {
   font-family: Arial, Helvetica, sans-serif;
   color: $textNav;
-  font-size: 16px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+.container {
+  position: relative;
+  overflow: hidden;
 }
 .wrapper {
     max-width: 1315px;

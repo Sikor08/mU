@@ -3,55 +3,83 @@
   display: flex;
   background-color: $mainDark;
   border-bottom: 1px solid #454545;
+  padding: 27px 0;
+
 }
 .header-logo {
   position: absolute;
-  left: 68px;
-  top: 24px;
+  left: 74px;
+  @media (max-width: $smallDesc) {
+    left: 20px;
+  }
+  @media (max-width: $tablet) {
+    top: 15px;
+  }
 }
 .header__wrapper {
   max-width: 1315px;
   margin: 0 auto;
 }
 .header-nav {
-  gap: 166px;
-  max-width: 1315px;
-  @include flexCenter;
-  padding: 27px 0;
-
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  justify-items: end;
+  @media (max-width: $smallDesc) {
+    justify-items: start;
+    gap: 30px;
+  }
+  @media (max-width: $tablet) {
+    display: none;
+  }
 }
+
 .header-nav-wrapper {
   @include flexCenter;
-  gap: 84px;
+  gap: 79px;
   &__tel {
     @include navText;
+    font-size: 15px;
+  }
+    @media (max-width: $smallDesc) {
+    gap: 20px;
   }
 }
 .header-nav-list {
   @include flexCenter;
-  gap: 69px;
+  gap: 71px;
   &__item {
     position: relative;
+    &:hover {
+      .header-popUp {
+        display: block;
+      }
+    }
   }
   &__link {
     @include navText;
   &:hover{
       border-bottom: 2px solid $redElems;
       padding: 27px 0;
+
+
     }
+  }
+  @media (max-width: $smallDesc) {
+    gap: 20px;
   }
 }
 .header-popUp {
   position: absolute;
   top: 56px;
   left: -23px;
+  display: none;
   &__link {
     @include navText;
 
   }
 }
 .header-popUp-list {
-  flex-direction: column;
+    flex-direction: column;
     display: flex;
     position: absolute;
     top: 25px;
@@ -60,7 +88,7 @@
 }
 .header-lang {
   @include flexCenter;
-  gap: 19px;
+  gap: 7px;
   &__lang{
     text-transform: uppercase;
     font-size: 12px;
@@ -68,19 +96,69 @@
   }  
 }
 .header-right {
-  position: absolute;
-  right: 81px;
-  top: 25px;
-  @include flexCenter;
+  display: flex;
   gap: 35px;
-}
-.search-wrapper {
-  position: relative;
+  padding: 5px;
+  position: absolute;
+  right: 70px;
+  @media (max-width: $smallDesc) {
+    right: 20px;
+    gap: 20px;
+  }
+  @media (max-width: $tablet) {
+    right: 5px; 
+    gap: 30px;
+    top: 12px;
+  }
+  &__svg {
+    cursor: pointer;
+  }
+  &__svg-search {
+    position: absolute;
+    top: 5px;
+    right: 120px;
+    @media (max-width: $smallDesc) {
+      right: 90px;
+    }
+    @media (max-width: $tablet) {
+      display: none;
+    }
+  }
+  &__svg-user {
+    @media (max-width: $tablet) {
+      display: none;
+    }
+  }
+  &__svg-phone {
+    display: none;
+    @media (max-width: $tablet) {
+      display: block;
+    }
+  }
 }
 .search-form {
   &__field {
     position: absolute;
-    right: -12px;
+    right: 100px;
+    top: -4px;
+    transition: ease-in-out .4s;
+    padding: 10px 20px;
+    width: 0;
+    background-color: inherit;
+    color: $textNav;
+    border-radius: 5px;
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    @media (max-width: $smallDesc) {
+      right: 75px;
+      width: 45px;
+      display: none;
+    }
+    &-active {
+      width: 481px;
+      background-color: #292B32;
+      transition: ease-in-out .4s;
+    }
   }
 }
 .cart-wrapper {
@@ -92,5 +170,200 @@
     @include box(7px);
     border-radius: 100%;
     background-color: $redElems;
+  }
+}
+.ham-wrapper {
+  display: none;
+  width: 20px;
+  position: relative;
+  margin-left: auto;
+  span:nth-child(1) {
+    top: 25%;
+  }
+  span:nth-child(2) {
+    width: 60%;
+    left: 30%;
+  }
+  span:nth-child(3) {
+    top: 75%;
+  }
+  &__active {
+    span:nth-child(1) {
+      top: 53%;
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+    span:nth-child(2) {
+      opacity: 0;
+    }
+    span:nth-child(3) {
+      top: 45%;
+      transform: translate(-50%, 50%) rotate(-45deg);
+
+    }
+  }
+  @media (max-width: $tablet) {
+    display: block;
+  }
+  .ham-wrapper__elem {
+    width: 100%;
+    height: 2px;
+    background-color: $textNav;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: ease-in-out .2s;
+  }
+
+}
+.user-wrapper {
+  display: block;
+  @media (max-width: $tablet) {
+    display: none;
+  }
+}
+
+.ham-menu {
+  position: absolute;
+  right: -100%;
+  width: 30%;
+  transition: ease-in-out .4s;
+  background-color: $mainDark;
+  height: 100vh;
+  display: none;
+  @media (max-width: $tablet) {
+    display: block;
+  }
+  @media (max-width: $mobile) {
+    width: 100%;
+  }
+  &__active {
+    right: 0;
+    transition: ease-in-out .4s;
+  }
+  &__wrapper {
+    padding: 0 16px;
+  }
+}
+.ham-menu-top {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 34px 0 34px 8px;
+  height: 170px;
+  position: relative;
+  & input {
+    width: 100%;
+    padding: 15px 13px;
+    background-color: $sectionDark;
+    border-radius: 5px;
+
+  }
+}
+.ham-search {
+  position: relative;
+  &__svg {
+    position: absolute;
+    right: 17px;
+    top: 14px;
+  }
+}
+.ham-reg {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px
+}
+.ham-reg-left {
+  @include flexCenter;
+  gap: 11px;
+  &__text {
+    font-family: Arial, Helvetica, sans-serif;
+    color: $textNav;
+    font-size: 14px
+  }
+
+
+}
+.ham-reg-right {
+  @include flexCenter;
+  gap: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: $textNav;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.ham-nav {
+  padding: 34px 0;
+  border-bottom: 1px solid #454545;
+  border-top: 1px solid  #454545;
+}
+.ham-nav-list {
+  display: grid;
+  gap: 30px;
+  &__item {
+    @include flexCenter;
+    gap: 10px;
+    position: relative;
+  }
+  &__link {
+    font-family: Arial, Helvetica, sans-serif;
+    color: $textNav;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+}
+.product-details {
+  &__heading {
+    @include flexCenter;
+    @include navText;
+    gap: 20px;
+    font-size: 14px;
+  }
+  &__arrow {
+    position: absolute;
+    left: 108px;
+    top: 3px;
+    rotate: -90deg;
+    transition: ease-in-out .2s;
+
+    &_active {
+      transition: ease-in-out .2s;
+      rotate: 0deg;
+    }
+  }
+}
+.product-details-list {
+  padding: 30px 20px 0 ;
+  display: grid;
+  gap: 20px;
+  &__link {
+    font-family: Arial, Helvetica, sans-serif;
+    color: $textNav;
+    font-size: 14px;
+  }
+}
+.ham-contacts {
+  padding: 34px 0 60px;
+  display: grid;
+  gap: 22px;
+  &__phone a{
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: $textNav;
+    font-weight: bold;
+    letter-spacing: 0.035em;
+  }
+}
+.ham-social-list {
+  display: flex;
+  gap: 14px;
+  &__item {
+    @include box(50px);
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #454545;
   }
 }
