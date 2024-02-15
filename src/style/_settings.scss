@@ -4,6 +4,8 @@ $mainDark: #1B1F22;
 $sectionDark: #292B32;
 $redElems: #FF3E41;
 $textNav : #CBCECF;
+$textWhite : #FFFFFF;
+
 
 $smallDesc: 1750px;
 $tablet: 1200px;
@@ -36,23 +38,20 @@ $mobile: 768px;
     font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
 }
+@mixin section-heading {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  color: #FFFFFF;
+  line-height: 50px;
+}
+@mixin section-mobile-heading {
+  font-size: 20px;
+  line-height: 25px;
+  margin-bottom: 38px;
+  max-width: fit-content;
+}
 
-  a:active,
-  a:focus,
-  input:active,
-  input:focus,
-  textarea:active,
-  textarea:focus,
-  button:active,
-  button:focus,
-  label:active,
-  label:focus {
-    outline: none !important;
-    outline-style: none !important;
-    -moz-outline-style: none !important;
-    text-decoration: none !important;
-  }
-  
   button {
     cursor: pointer;
   }
@@ -66,29 +65,15 @@ $mobile: 768px;
     font-weight: 600;
     margin: 0;
   }
-  
-  h1 {
-    font-weight: 600;
-    font-size: 41px;
-    margin-bottom: 69px;
-    text-align: center;
-  }
-  
   input,
   select,
   textarea {
-    outline: none !important;
-    outline-style: none !important;
-    -moz-outline-style: none !important;
+    outline: none;
+    outline-style: none;
+    -moz-outline-style: none;
     border: 0;
   }
-  
-  img {
-    line-height: 100%;
-    max-width: 100%;
-    display: block;
-  }
-  
+
   a,
   a:hover,
   a:focus,

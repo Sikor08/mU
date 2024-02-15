@@ -1,9 +1,138 @@
 @import"settings.scss";
 
 .promo {
-    height: 900px;
     background-color: $mainDark;
-    background-image: url(/src/img/promoMain.png);
-    background-repeat: no-repeat;
-    background-position: bottom;
+
+    &__wrapper {
+        padding-top: 98px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
+.promo-left {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 300px 300px 260px;
+    background-image: url(/src/img/testerBlur.png);
+    background-position-x: -94px;
+    background-position-y: 155px;
+    background-repeat: no-repeat;
+    &__heading {
+        font-family: Arial, Helvetica, sans-serif;
+        color: $textNav;
+        font-size: 32px;
+        letter-spacing: 0.02rem;
+        line-height: 2.5rem;
+        font-weight: bold;
+    }
+    &__title-text {
+        position: absolute;
+        top: 36.5%;
+        left: -111px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: $textNav;
+        font-size: 32px;
+        font-weight: bold;
+
+    }
+    &__bottom {
+        position: relative;
+    }
+}
+.buy-btn {
+    padding: 5px 0;
+    position: absolute;
+    top: 79px;
+    left: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: $textNav;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0;
+    border: none;
+    border-bottom: 1px solid $textNav;
+    background-color: transparent;
+    cursor: pointer;
+  
+}
+.promo-center {
+    background-image: url(/src/img/promoMeasure.png);
+    background-repeat: no-repeat;
+    background-position-x: -23px;
+    background-position-y: 90px;
+
+}
+.promo-right {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 280px 320px 260px;
+}
+.promo-right-video {
+    #textPath {
+        fill: none;
+      } 
+    position: relative;
+    &__text {
+        rotate: -71deg;
+        position: absolute;
+        right: -147px;
+        top: -85px;
+        font-family: Arial, Helvetica, sans-serif;
+        fill: $textNav;
+        font-size: 17px;
+        letter-spacing: 0.2rem;
+    }
+    &__play {
+        position: absolute;
+        top: 81px;
+        right: 34px;
+    }
+}
+.promo-right-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    font-family: Arial, Helvetica, sans-serif;
+    color: $textNav;
+    &__text {
+        text-align: end;
+        font-size: 72px;
+        font-weight: bold;
+        margin-bottom: 19px;
+    }
+    &__text-top {
+        margin-right: 15px;
+    }
+    &__bottom {
+        font-size: 20px;
+        font-weight: bold;
+
+    }
+}
+.gosreestr-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.promo-right-gosreestr {
+    display: flex;
+    justify-content: end;
+}
+.gosreestr-text {
+    font-family: Arial, Helvetica, sans-serif;
+    color: $textNav;
+    &__top {
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        margin: 5px 0;
+    }
+    &__bottom {
+        font-size: 12px;
+    }
+}
+
+
+ 

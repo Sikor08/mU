@@ -1,0 +1,111 @@
+@import"settings.scss";
+
+.advantages {
+    background-color: $mainDark;
+    padding: 26px 17px;
+}
+.advantages-wrapper {
+    display: grid;
+    gap: 25px;
+}
+section {
+    background-color: $sectionDark;
+    border-radius: 20px;
+    background-repeat: no-repeat;
+
+}
+.reliableOnScales {
+    background-image: url(/src/img/adv1Img.png);
+    background-position: right;
+    padding: 97px 0 50px 67px;
+    @media (max-width: $tablet) {
+        background-size: 50%;
+    }
+    @media (max-width: $mobile) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-size: 100%;
+        background-position: top;
+        padding: 358px 25px 50px;
+    }
+    @media (max-width: $mobile) {
+        padding: 358px 25px 50px;
+    }
+    &__heading {
+        @include section-heading;
+        max-width: 600px;
+        margin-bottom: 65px;
+        @media (max-width: $tablet) {
+            max-width: 60%;
+        }
+        @media (max-width: $mobile) {
+            @include section-mobile-heading
+
+        }
+    }
+}
+.reliableOnScales-characteristics {
+    width: 49%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    @media (max-width: $tablet) {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    @media (max-width: $mobile) {
+        width: 100%;
+        gap: 15px;
+    }
+}
+.characteristics {
+    &__heading {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #7F8589;
+        font-size: 16px;
+        text-transform: uppercase;
+        @media (max-width: $tablet) {
+            font-size: 12px;
+        }
+    }
+
+}
+.characteristics-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 43px 0;
+    @media (max-width: $tablet) {
+        padding: 28px 0;
+        gap: 18px;
+
+    }
+    &__item {
+        border-bottom: 1px solid #454545;
+        padding-bottom: 10px;
+        @media (max-width: $tablet) {
+            padding-bottom: 5px;
+
+        }
+    }
+    &__subject {
+        display: flex;
+        justify-content: space-between;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #CBCECF;
+        font-size: 16px;
+        @media (max-width: $tablet) {
+            font-size: 12px;
+        }
+    }
+    &__value {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #CBCECF;
+        font-size: 16px;
+        text-transform: uppercase;
+        @media (max-width: $tablet) {
+            font-size: 12px;
+        }
+    }
+}

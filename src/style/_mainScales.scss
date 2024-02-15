@@ -1,0 +1,70 @@
+@import"settings.scss";
+.mainScales {
+    background-image: url(/src/img/adv3Img.png);
+    @media (max-width: $tablet) {
+        background-size: 50%;
+    }
+    @media (max-width: $mobile) {
+        background-size: 100%;
+        background-position-x: -26px;
+    }
+}
+.mainScales-content-wrapper {
+    max-width: 43%;
+    @media (max-width: $mobile) {
+        max-width: fit-content;
+    }
+}
+.mainScales-content {
+    display: flex;
+    justify-content: end;
+    padding: 103px 76px 85px;
+    @media (max-width: $tablet) {
+        background-size: 50%;
+    }
+    @media (max-width: $mobile) {
+        background-size: 100%;
+        padding: 360px 25px 85px;
+    }
+    &__heading {
+        @include section-heading;
+        margin-bottom: 35px;
+        line-height: 52px;
+        @media (max-width: $mobile) {
+            @include section-mobile-heading;
+            max-width: 78%;
+            margin-bottom: 23px;
+        }
+    }
+    &__text {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #CBCECF;
+        font-size: 16px;
+        margin-bottom: 142px;
+        line-height: 27px;
+        letter-spacing: 0.2px;
+        @media (max-width: $tablet) {
+            margin-bottom: 30px;
+
+        }
+        @media (max-width: $mobile) {
+            font-size: 12px;
+            line-height: 17px;
+
+        }
+        & span {
+            color: #FFFFFF;
+        }
+    }
+    &__link {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #CBCECF;
+        font-size: 16px;
+        text-transform: uppercase;
+        border-bottom: 1px solid #FFFFFF;
+        padding-bottom: 5px;
+        @media (max-width: $mobile) {
+            font-size: 12px;
+        }
+    }
+}

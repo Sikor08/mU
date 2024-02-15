@@ -1,0 +1,113 @@
+@import"settings.scss";
+.sensor {
+    height: 782px;
+    background-image: url(/src/img/adSensor.png);
+    background-position: bottom;
+    padding: 70px 0;
+    @media (max-width: $mobile) {
+        background-position-y: bottom;
+        padding: 33px 22px;
+        background-size: 92%;
+        height: 575px;
+    }
+}
+.section-heading {
+    @include section-heading;
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+    @media (max-width: $mobile) {
+        @include section-mobile-heading;
+        max-width: 100%;
+        text-align: start;
+
+    }
+}
+.sensor-content {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 130px;
+    @media (max-width: $mobile) {
+        flex-direction: column;
+        padding: 0;
+        gap: 10px;
+    }
+
+}
+.sensore-gosreestr {
+    padding-left: 90px;
+    @media (max-width: $mobile) {
+        padding: 0;
+    }
+}
+.sensore-gosreestr-top {
+    @include section-heading;
+    font-size: 24px;
+    line-height: normal;
+    @media (max-width: $mobile) {
+        font-size: 16px;
+    }
+}
+.sensore-gosreestr-list {
+    display: grid;
+    gap: 10px;
+    padding: 30px;
+    @media (max-width: $mobile) {
+        padding: 13px 20px;
+    }
+    &__item {
+        @include section-heading;
+        font-size: 16px;
+        font-weight: normal;
+        line-height: normal;
+        color: $textNav;
+        padding-right: 10px;
+        position: relative;
+        @media (max-width: $mobile) {
+            font-size: 12px;
+        }
+        &::before {
+            content: " ";
+            background: $textNav;
+            width: 10px;
+            height: 1px;
+            position: absolute;
+            top: 50%;
+            margin: 0 -28px;
+            @media (max-width: $mobile) {
+                margin: 0 -20px;
+            }
+        }
+    }
+}
+.calibr {
+    padding-right: 60px;
+    @media (max-width: $mobile) {
+        padding: 0;
+    }
+    &__top {
+    @include section-heading;
+    font-size: 24px;
+    max-width: 280px;
+    line-height: 25px;
+    margin-bottom: 23px;
+    @media (max-width: $mobile) {
+        font-size: 16px;
+        max-width: 170px;
+        margin-bottom: 13px;
+
+    }
+    }
+    &__link {
+        @include section-heading;
+        color: $redElems;
+        font-size: 16px;
+        border-bottom: 1px solid $redElems;
+        font-weight: normal;
+        line-height: normal;
+        @media (max-width: $mobile) {
+            font-size: 12px;
+            padding: 3px;
+        }
+    }
+}

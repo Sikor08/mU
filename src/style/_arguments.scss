@@ -1,0 +1,130 @@
+@import"settings.scss";
+.arguments {
+    background-color: $mainDark;
+    text-align: center;
+    padding: 100px 15px;
+
+    &__title {
+        @include section-heading;
+        margin-bottom: 70px;
+        line-height: normal;
+        @media (max-width: $mobile) {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+    }
+}
+.arguments-section-wrapper {
+    padding: 0 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    @media (max-width: $mobile) {
+        grid-template-columns: 1fr;
+        max-width: 470px;
+        margin: 0 auto;
+    }
+}
+.arguments-section {
+    background-color: $sectionDark;
+    padding: 70px 80px;
+    @media (max-width: $tablet) {
+        padding: 30px 25px;
+    }
+}
+.ontrade {
+    text-align: start;
+}
+.ontrade-heading {
+    margin-bottom: 50px;
+    position: relative;
+    display: flex;
+    align-items: end;
+    &__h3 {
+        font-family: Arial, Helvetica, sans-serif; 
+        font-weight: bold;
+        color: $textWhite;
+        font-size: 32px;
+        line-height: 43px;
+        @media (max-width: $mobile) {
+            font-size: 20px;
+    
+        }
+    }
+    &__h2 {
+        font-family: Arial, Helvetica, sans-serif; 
+        font-weight: bold;
+        color: $textWhite;
+        font-size: 32px;
+        line-height: 43px;
+        @media (max-width: $mobile) {
+            font-size: 20px;
+        }
+    }
+    &__h1 {
+        font-family: Arial, Helvetica, sans-serif;
+        color: $textWhite;
+
+            font-size: 192px;
+            line-height: 150px;
+            @media (max-width: $tablet) {
+                font-size: 100px;
+                line-height: inherit;
+            }
+        }
+
+
+}
+.ontrade-text {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: $textNav;
+    max-width: 450px;
+    line-height: 25px;
+    margin-bottom: 70px;
+}
+.ontrade-list {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: $textWhite;
+    display: grid;
+    gap: 10px;
+    :nth-child(1) {
+
+        &::before {
+            content: url(/src/img/sertifSvg.svg);
+            margin-right: 15px;
+        }
+    }
+    :nth-child(2) {
+
+        &::before {
+            content: url(/src/img/rewardsSvg.svg);
+            margin-right: 15px;
+
+        }
+    }
+    :nth-child(3) {
+        grid-column: 1/3;
+        &::before {
+            content: url(/src/img/fitbackSvg.svg);
+            margin-right: 15px;
+
+        }
+    }
+    grid-template-columns: 1fr 1fr;
+    &__item {
+        border: 1px solid #4E5051;
+        border-radius: 30px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15px 0;
+        width: 100%;
+        @media (max-width: $mobile) {
+            font-size: 12px;
+            
+        }
+    }
+}
