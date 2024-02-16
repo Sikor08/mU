@@ -3,19 +3,21 @@
     background-color: $mainDark;
     text-align: center;
     padding: 100px 15px;
+    @media (max-width: $mobile) {
+        padding: 50px 15px;
 
+    }
     &__title {
         @include section-heading;
         margin-bottom: 70px;
         line-height: normal;
         @media (max-width: $mobile) {
             font-size: 20px;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
     }
 }
 .arguments-section-wrapper {
-    padding: 0 15px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
@@ -36,10 +38,13 @@
     text-align: start;
 }
 .ontrade-heading {
-    margin-bottom: 50px;
+    margin-bottom: 25px;
     position: relative;
     display: flex;
     align-items: end;
+    @media (max-width: $mobile) {
+        margin-bottom: 10px;
+    }
     &__h3 {
         font-family: Arial, Helvetica, sans-serif; 
         font-weight: bold;
@@ -48,7 +53,6 @@
         line-height: 43px;
         @media (max-width: $mobile) {
             font-size: 20px;
-    
         }
     }
     &__h2 {
@@ -64,7 +68,6 @@
     &__h1 {
         font-family: Arial, Helvetica, sans-serif;
         color: $textWhite;
-
             font-size: 192px;
             line-height: 150px;
             @media (max-width: $tablet) {
@@ -72,8 +75,6 @@
                 line-height: inherit;
             }
         }
-
-
 }
 .ontrade-text {
     font-family: Arial, Helvetica, sans-serif;
@@ -82,6 +83,11 @@
     max-width: 450px;
     line-height: 25px;
     margin-bottom: 70px;
+    @media (max-width: $mobile) {
+        font-size: 12px;
+        line-height: 20px;
+        margin-bottom: 25px;
+    }
 }
 .ontrade-list {
     font-family: Arial, Helvetica, sans-serif;
@@ -124,6 +130,7 @@
         width: 100%;
         @media (max-width: $mobile) {
             font-size: 12px;
+            padding: 10px 0;
             
         }
     }
