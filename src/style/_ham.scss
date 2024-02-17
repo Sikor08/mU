@@ -2,6 +2,7 @@
 .ham-menu {
     position: absolute;
     right: -100%;
+    top: 60px;
     width: 30%;
     transition: ease-in-out .4s;
     background-color: $mainDark;
