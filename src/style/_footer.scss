@@ -1,0 +1,156 @@
+@import"settings.scss";
+
+footer {
+    background-color: $mainDark;
+}
+.footer-wrapper {
+    padding: 90px 15px;
+}
+.footer-main {
+    display: grid;
+    grid-template-columns: 1fr 4fr 2fr;
+    margin-bottom: 100px;
+    @media (max-width: $mobile) {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+.footer-nav {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    justify-items: start;
+    padding: 0 60px;
+    @media (max-width: $mobile) {
+        padding: 0;
+    }
+}
+
+.footer-nav-products {
+    &__heading {
+        font-size: 15px;
+        font-weight: bold;
+        color: #FFFFFF;
+        font-weight: bold;
+        margin-bottom: 35px;
+        @media (max-width: $mobile) {
+            font-size: 12px;
+        }
+    }
+}
+.footer-nav-products-list__link {
+    font-size: 15px;
+    font-weight: bold;
+    color: #7F8589;
+    font-weight: normal;
+            @media (max-width: $mobile) {
+            font-size: 12px;
+        }
+}
+.footer-nav-company {
+    &__heading {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        font-weight: bold;
+        color: #FFFFFF;
+        margin-bottom: 35px;
+        @media (max-width: $mobile) {
+            font-size: 12px;
+        }
+
+    }
+}
+.footer-nav-products-list {
+    display: grid;
+    gap: 20px;
+
+}
+.footer-nav-company-list__link {
+    font-size: 15px;
+    color: #7F8589;
+    @media (max-width: $mobile) {
+        font-size: 12px;
+    }
+    &_bold {
+        font-weight: bold;
+        color: #FFFFFF;
+    }
+}
+.footer-nav-company-list {
+    display: grid;
+    gap: 20px;
+    :nth-child(4), :nth-child(5), :nth-child(6){
+        margin-bottom: 12px;
+    }
+}
+.footer-contacts {
+    padding: 0 30px;
+    @media (max-width: $mobile) {
+        padding: 0;
+        grid-row: 2/3;
+    }
+
+
+}
+.footer-contacts-connection {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 83px;
+    &__tel {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 32px;
+        color: $textWhite;
+        @media (max-width: $tablet) {
+            font-size: 20px;
+        }
+    }
+}
+
+.footer-contacts-callback {
+    display: flex;
+    gap: 28px;
+    &__text {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        color: $textWhite;
+        @media (max-width: $mobile) {
+            font-size: 12px;
+        }
+    }
+}
+.footer-contacts-mail {
+    display: flex;
+    gap: 28px;
+}
+.footer-contacts-adress {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    &__heading {
+        color: $textWhite;
+        font-weight: bold;
+        margin-bottom: 25px;
+        @media (max-width: $mobile) {
+            font-size: 12px;
+        }
+    }
+    &__main {
+        font-weight: normal;
+        color: #7F8589;
+        line-height: 20px;
+    }
+}
+.footer-bottom {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+    color: #7F8589;
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: $mobile) {
+        flex-direction: column;
+        font-size: 11px;
+        gap: 15px;
+
+    }
+}
