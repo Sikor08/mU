@@ -1,6 +1,72 @@
 import"./style/style.scss";
 import 'reset-css';
 
+
+
+// import Swiper bundle with all modules installed
+import Swiper from 'swiper/bundle';
+
+// import styles bundle
+import 'swiper/css/bundle';
+
+// init Swiper:
+// const innerSwiper = new Swiper('.inner-swiper', {
+//     grabCursor: true,
+    
+// })
+const innerSwiper = new Swiper ('.swiper-inner', {
+    slidesPerView: 1,
+
+    pagination: {
+        el: '.swiper-pagination',
+      },
+})
+const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    // direction: 'vertical',
+    // loop: true,
+
+    // custom
+  slidesPerView: 3,
+  spaceBetween: 30,
+//   autoplay: {
+//     delay : 2000,
+//     stopOnLast: false,
+//     disableOnInteraction : false
+//   },
+//   speed: 800,
+
+  breakpoints: {
+    320: {
+        slidesPerView: 1
+
+    },
+    768: {   
+        slidesPerView: 2
+    
+    },
+    1100: {
+        slidesPerView: 3
+    },
+  },
+    // If we need pagination
+    // pagination: {
+    //   el: '.swiper-pagination',
+    // },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  
+    // And if we need scrollbar
+    // scrollbar: {
+    //   el: '.swiper-scrollbar',
+    // },
+  });
+
+
 // header search
 const searchIconElem = document.querySelector('.header-right__svg-search');
 const searchFormElem = document.querySelector('.search-form__field');

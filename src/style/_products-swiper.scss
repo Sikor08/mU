@@ -1,0 +1,57 @@
+@import"settings.scss";
+.swiper {
+    height: 595px;
+}
+.swiper-wrapper {
+    display: grid;
+}
+.swiper-slide {
+    padding: 50px;
+    text-align: start;
+    background-color: #F5F5F5;
+    border-radius: 20px;
+    overflow: hidden;
+    &__heading {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 18px;
+        color: $mainDark;
+        max-width: 200px;
+        margin-bottom: 50px
+    }
+}
+.swiper-inner {
+    overflow: hidden;
+    height: 350px;
+
+}
+.swiper-inner-slide {
+    position: relative;
+    padding: 0;
+    &__1 {
+        background-image: url(/src/img/prodSwipImg/prodSwipe1.png);
+        background-repeat: no-repeat;
+        background-position: top;
+    }
+    &__2 {
+        background-image: url(/src/img/prodSwipImg/prodSwipe2.png);
+        background-repeat: no-repeat;
+        background-position: top;
+    }
+    &__3 {
+        background-image: url(/src/img/prodSwipImg/prodSwipe3.png);
+        background-repeat: no-repeat;
+        background-position: top;
+    }
+}
+.swiper-inner-pagination {
+    position: absolute;
+    bottom: 120px !important;
+}
+.swiper-button-prev {
+    left: -50px !important;
+    top: 45% !important;
+}
+.swiper-button-next {
+    right: -50px !important;
+    top: 45% !important;
+}

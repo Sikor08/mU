@@ -21,6 +21,7 @@
     "webpack-dev-server": "^4.15.1"
   },
   "dependencies": {
-    "reset-css": "^5.0.2"
+    "reset-css": "^5.0.2",
+    "swiper": "^11.0.6"
   }
 }

@@ -16,48 +16,4 @@
     position: relative;
 
 }
-.swiper {
-    height: 800px;
-    border: 1px solid red;
-    padding: 100px 0;
-    overflow: hidden;
-    position: relative;
 
-
-}
-.swiper-line {
-    border: 1px solid green;
-    position: absolute;
-}
-.slides {
-    display: flex;
-    gap: 20px;
-}
-.slide {
-    width: 418px;
-    height: 595px;
-    border: 1px solid #000;
-    padding: 0 20px;
-    &__1 {
-        background-color: aqua;
-    }
-    &__2 {
-        background-color: orange;
-    }    
-    &__3 {
-        background-color: grey;
-    }    
-    &__4 {
-        background-color: blue;
-    }
-}
-.prev {
-    position: absolute;
-    top: 50%;
-    left: -50px;
-}
-.next {
-    position: absolute;
-    top: 50%;
-    right: -50px;
-}
