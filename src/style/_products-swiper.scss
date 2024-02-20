@@ -1,57 +1,149 @@
 @import"settings.scss";
 .swiper {
     height: 595px;
+    @media (max-width: $tablet) {
+        height: 480px;
+
+    }
 }
 .swiper-wrapper {
     display: grid;
 }
 .swiper-slide {
-    padding: 50px;
+    padding: 50px 40px;
     text-align: start;
     background-color: #F5F5F5;
     border-radius: 20px;
     overflow: hidden;
+    @media (max-width: 1350px) {
+        padding: 30px 15px;
+
+    }
     &__heading {
         font-family: Arial, Helvetica, sans-serif;
         font-size: 18px;
         color: $mainDark;
-        max-width: 200px;
-        margin-bottom: 50px
+        max-width: 250px;
+        margin-bottom: 0;
+        font-weight: bold;
+        line-height: 22px;
     }
 }
 .swiper-inner {
     overflow: hidden;
-    height: 350px;
+    height: 405px;
+    @media (max-width: $tablet) {
+        height: 300px;
 
+    }
 }
 .swiper-inner-slide {
     position: relative;
-    padding: 0;
+    @media (max-width: 1350px) {
+        background-size: 95%;
+    }
     &__1 {
         background-image: url(/src/img/prodSwipImg/prodSwipe1.png);
         background-repeat: no-repeat;
         background-position: top;
+        background-position: center;
+
     }
     &__2 {
         background-image: url(/src/img/prodSwipImg/prodSwipe2.png);
         background-repeat: no-repeat;
         background-position: top;
+        background-position: center;
+
     }
     &__3 {
         background-image: url(/src/img/prodSwipImg/prodSwipe3.png);
         background-repeat: no-repeat;
         background-position: top;
+        background-position: center;
+
     }
 }
 .swiper-inner-pagination {
     position: absolute;
-    bottom: 120px !important;
+    bottom: 22% !important;
+    gap: 50px !important;
+}
+.swiper-pagination-bullet {
+    margin: 0 7px!important;
+    background-color: $mainDark !important;
 }
 .swiper-button-prev {
     left: -50px !important;
     top: 45% !important;
+    color: black !important;
+    @media (max-width: 1450px) {
+        --swiper-navigation-size: 25px;
+        left: 50px !important;
+        top: 80% !important;
+        border-radius: 100%;
+        padding: 25px;
+        background-color: #F5F5F5;
+    }
+    @media (max-width: $tablet) {
+        top: 70% !important;
+    }
 }
 .swiper-button-next {
     right: -50px !important;
     top: 45% !important;
+    color: black !important;
+    @media (max-width: 1450px) {
+        --swiper-navigation-size: 25px;
+
+        left: 120px !important;
+        top: 80% !important;
+        border-radius: 100%;
+        padding: 25px;
+        background-color: #F5F5F5;
+    }
+    @media (max-width: $tablet) {
+        top: 70% !important;
+    }
+}
+.slide-bottom {
+    @include flexCenter;
+    justify-content: space-between;
+}
+.slide-bottom-stock {
+    &__avail {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 13px;
+        color: #7F8589;
+        margin-bottom: 10px;
+    }
+    &__price {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 24px;
+        color: $mainDark;
+        font-weight: bold;
+        &_old-price {
+            color: #7F8589;
+            font-weight: normal;
+            text-decoration: line-through;
+            margin-right: 10px;
+        }
+    }
+}
+.slide-bottom-links {
+    display: flex;
+    gap: 15px;
+}
+.slide-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    @include flexCenter;
+    justify-content: center;
+    &__buy {
+        background-color: $redElems;
+    }
+    &__product {
+        background-color: $mainDark;
+    }
 }

@@ -16,7 +16,7 @@ import 'swiper/css/bundle';
 // })
 const innerSwiper = new Swiper ('.swiper-inner', {
     slidesPerView: 1,
-
+    nested: true,
     pagination: {
         el: '.swiper-pagination',
       },
@@ -29,7 +29,9 @@ const swiper = new Swiper('.swiper', {
     // custom
   slidesPerView: 3,
   spaceBetween: 30,
-//   autoplay: {
+  slideToClickedSlide: false,
+  allowTouchMove: false,
+  //   autoplay: {
 //     delay : 2000,
 //     stopOnLast: false,
 //     disableOnInteraction : false
@@ -38,14 +40,14 @@ const swiper = new Swiper('.swiper', {
 
   breakpoints: {
     320: {
-        slidesPerView: 1
+        slidesPerView: 1.2
 
     },
-    768: {   
+    650: {   
         slidesPerView: 2
     
     },
-    1100: {
+    1200: {
         slidesPerView: 3
     },
   },
