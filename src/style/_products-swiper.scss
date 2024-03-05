@@ -1,15 +1,14 @@
 @import"settings.scss";
-.swiper {
+.swiper-products {
     height: 595px;
     @media (max-width: $tablet) {
         height: 480px;
-
     }
 }
 .swiper-wrapper {
     display: grid;
 }
-.swiper-slide {
+.swiper-products-slide {
     padding: 50px 40px;
     text-align: start;
     background-color: #F5F5F5;
@@ -74,36 +73,29 @@
     background-color: $mainDark !important;
 }
 .swiper-button-prev {
-    left: -50px !important;
-    top: 45% !important;
+    left: -70px !important;
+    top: 55% !important;
     color: black !important;
     @media (max-width: 1450px) {
         --swiper-navigation-size: 25px;
         left: 50px !important;
-        top: 80% !important;
+        top: 92% !important;
         border-radius: 100%;
         padding: 25px;
         background-color: #F5F5F5;
-    }
-    @media (max-width: $tablet) {
-        top: 70% !important;
     }
 }
 .swiper-button-next {
-    right: -50px !important;
-    top: 45% !important;
+    right: -70px !important;
+    top: 55% !important;
     color: black !important;
     @media (max-width: 1450px) {
         --swiper-navigation-size: 25px;
-
         left: 120px !important;
-        top: 80% !important;
+        top: 92% !important;
         border-radius: 100%;
         padding: 25px;
         background-color: #F5F5F5;
-    }
-    @media (max-width: $tablet) {
-        top: 70% !important;
     }
 }
 .slide-bottom {

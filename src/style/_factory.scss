@@ -1,0 +1,81 @@
+@import"settings.scss";
+
+.ourFactory {
+    background-color: $mainDark;
+    text-align: center;
+    &__title {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 40px;
+        font-weight: bold;
+        color: $textWhite;
+        margin-bottom: 100px;
+    }
+}
+.ourFactory-wrapper {
+    position: relative;
+    height: 800px;
+    padding: 100px 0;
+}
+.swiperFactory {
+    height: 410px;
+}
+.swiper-fact-slide {
+    &:hover {
+        width: 500px;;
+    }
+    background-color: $mainDark;
+    &__1 {
+        background-image: url(/src/img/factSwiper/factSlide1.png);
+        border-radius: 30px;
+
+    }
+    &__2 {
+        background-color: $mainDark;
+        padding: 0;
+        display: grid!important;
+        grid-template-columns: 1fr 1fr;
+        border-radius: 30px;
+        gap: 15px;
+        &-top-left {
+            border-radius: 20px;
+            background-image: url(/src/img/factSwiper/factSmallSlide1.png);
+            background-size: cover;
+        }
+        &-top-right {
+            border-radius: 20px;
+            background-image: url(/src/img/factSwiper/factSmallSlide2.png);
+            background-size: cover;
+
+        }        
+        &-bottom-left {
+            border-radius: 20px;
+            background-image: url(/src/img/factSwiper/factSmallSlide3.png);
+            background-size: cover;
+
+        }        
+        &-bottom-right {
+            border-radius: 20px;
+            background-image: url(/src/img/factSwiper/factSmallSlide4.png);
+            background-size: cover;
+
+        }
+    }
+
+    &__3 {
+        background-image: url(/src/img/factSwiper/factSlide2.png);
+        border-radius: 30px;
+    }
+    &__4 {
+        background-image: url(/src/img/factSwiper/factSlide1.png);
+        border-radius: 30px;
+    }
+    &__5 {
+        background-image: url(/src/img/factSwiper/factSlide2.png);
+        border-radius: 30px;
+    }
+
+}
+
+.swiper-button-prev-fact, .swiper-button-next-fact{
+    color: $textWhite !important;
+}

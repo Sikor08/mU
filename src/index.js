@@ -68,7 +68,31 @@ const swiper = new Swiper('.swiper', {
     // },
   });
 
-
+  const swiperFactory = new Swiper('.swiperFactory', {
+    // Optional parameters
+    loop: false,
+    slidesPerView: 3,
+    spaceBetween: 30,
+    
+    breakpoints: {
+      320: {
+          slidesPerView: 1.2
+  
+      },
+      650: {   
+          slidesPerView: 2
+      
+      },
+      1200: {
+          slidesPerView: 3
+      },
+    },
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  }); 
 // header search
 const searchIconElem = document.querySelector('.header-right__svg-search');
 const searchFormElem = document.querySelector('.search-form__field');
