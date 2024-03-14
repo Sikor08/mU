@@ -28,8 +28,9 @@ $mobile: 768px;
 }
 .container {
   position: relative;
-  overflow: hidden;
   
+  overflow: hidden;
+  overflow-y: scroll;
 }
 .wrapper {
     max-width: 1315px;

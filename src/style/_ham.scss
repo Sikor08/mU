@@ -1,5 +1,6 @@
 @import"settings.scss";
 .ham-menu {
+    overflow-y: scroll;
     position: absolute;
     right: -100%;
     top: 60px;

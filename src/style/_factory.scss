@@ -20,13 +20,16 @@
     height: 410px;
 }
 .swiper-fact-slide {
-    &:hover {
-        width: 500px;;
-    }
     background-color: $mainDark;
+    border-radius: 30px;
+
+    &:hover {
+        background-size: 120%!important;
+        background-size: cover;
+        background-repeat: no-repeat;
+     }
     &__1 {
         background-image: url(/src/img/factSwiper/factSlide1.png);
-        border-radius: 30px;
 
     }
     &__2 {
@@ -78,4 +81,6 @@
 
 .swiper-button-prev-fact, .swiper-button-next-fact{
     color: $textWhite !important;
+    background-color: inherit;
+
 }

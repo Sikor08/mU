@@ -58,8 +58,8 @@ const swiper = new Swiper('.swiper', {
   
     // Navigation arrows
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.swiper-button-prev-prod',
+      prevEl: '.swiper-button-next-prod',
     },
   
     // And if we need scrollbar
@@ -89,10 +89,57 @@ const swiper = new Swiper('.swiper', {
     },
     // Navigation arrows
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.swiper-button-prev-fact',
+      prevEl: '.swiper-button-next-fact',
     },
   }); 
+  const swiperInfo = new Swiper('.swiper-infocenter', {
+    // Optional parameters
+    // direction: 'vertical',
+    // loop: true,
+
+    // custom
+  slidesPerView: 3,
+  spaceBetween: 30,
+  slideToClickedSlide: false,
+  allowTouchMove: false,
+  //   autoplay: {
+//     delay : 2000,
+//     stopOnLast: false,
+//     disableOnInteraction : false
+//   },
+//   speed: 800,
+
+  breakpoints: {
+    320: {
+        slidesPerView: 1.2
+
+    },
+    650: {   
+        slidesPerView: 2
+    
+    },
+    1200: {
+        slidesPerView: 3
+    },
+  },
+    // If we need pagination
+    // pagination: {
+    //   el: '.swiper-pagination',
+    // },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-prev-info',
+      prevEl: '.swiper-button-next-info',
+    },
+  
+    // And if we need scrollbar
+    // scrollbar: {
+    //   el: '.swiper-scrollbar',
+    // },
+  });
+
 // header search
 const searchIconElem = document.querySelector('.header-right__svg-search');
 const searchFormElem = document.querySelector('.search-form__field');

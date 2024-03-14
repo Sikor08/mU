@@ -4,9 +4,15 @@
     background-color: $mainDark;
 
     &__wrapper {
-        padding-top: 98px;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        padding: 98px 5px 0;
+        display: flex;
+        justify-content: space-between;
+        background-image: url(/src/img/promoMeasure.png);
+        background-repeat: no-repeat;
+        background-image: url(/src/img/promoMeasure.png);
+        background-position: center;
+        background-size: 50%;
+
     }
 }
 .promo-left {
@@ -14,9 +20,7 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 300px 300px 260px;
-    background-image: url(/src/img/testerBlur.png);
-    background-position-x: -94px;
-    background-position-y: 155px;
+
     background-repeat: no-repeat;
     &__heading {
         font-family: Arial, Helvetica, sans-serif;
@@ -28,8 +32,6 @@
     }
     &__title-text {
         position: absolute;
-        top: 36.5%;
-        left: -111px;
         font-family: Arial, Helvetica, sans-serif;
         color: $textNav;
         font-size: 32px;
@@ -57,13 +59,6 @@
     cursor: pointer;
   
 }
-.promo-center {
-    background-image: url(/src/img/promoMeasure.png);
-    background-repeat: no-repeat;
-    background-position-x: -23px;
-    background-position-y: 90px;
-
-}
 .promo-right {
     display: grid;
     grid-template-columns: 1fr;
@@ -75,10 +70,11 @@
       } 
     position: relative;
     &__text {
+        width: 150px;
         rotate: -71deg;
         position: absolute;
-        right: -147px;
-        top: -85px;
+        right: -70px;
+        top: -115px;
         font-family: Arial, Helvetica, sans-serif;
         fill: $textNav;
         font-size: 17px;
@@ -86,8 +82,8 @@
     }
     &__play {
         position: absolute;
-        top: 81px;
-        right: 34px;
+        top: 10px;
+        right: 40px;
     }
 }
 .promo-right-heading {
@@ -101,9 +97,13 @@
         font-size: 72px;
         font-weight: bold;
         margin-bottom: 19px;
+        @media (max-width: $tablet) {
+            font-size: 12px;
+        }
     }
     &__text-top {
         margin-right: 15px;
+
     }
     &__bottom {
         font-size: 20px;
